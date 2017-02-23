@@ -28,11 +28,15 @@ public class AppTest
         return new TestSuite( AppTest.class );
     }
 
+  
     /**
-     * Rigourous Test :-)
+     *  test of conversion method
      */
-    public void testApp()
+    public void testRoman()
     {
-        assertTrue( true );
+        assertEquals( "I",App.roman(1));
+        assertEquals( "IV",App.roman(4));
+        assertEquals( "MCMLIV",App.roman(1954));
+        assertEquals( "MCMXC",App.roman(1990));
     }
 }

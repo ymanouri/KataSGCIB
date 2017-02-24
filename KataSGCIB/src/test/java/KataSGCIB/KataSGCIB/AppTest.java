@@ -10,7 +10,10 @@ import junit.framework.TestSuite;
 public class AppTest 
     extends TestCase
 {
-    /**
+    
+
+	
+	/**
      * Create the test case
      *
      * @param testName name of the test case
@@ -38,5 +41,20 @@ public class AppTest
         assertEquals( "IV",App.roman(4));
         assertEquals( "MCMLIV",App.roman(1954));
         assertEquals( "MCMXC",App.roman(1990));
+    }
+    
+    /**
+     *  test of  bad argument
+     */
+    public void testRomanException()
+    {
+    	try {
+    		App.roman(0);
+    		App.roman(6500);
+    		fail();
+		} catch (IllegalArgumentException e) {
+			assertEquals(App.INVALID_NUMBER, e.getMessage());
+		}
+ 
     }
 }

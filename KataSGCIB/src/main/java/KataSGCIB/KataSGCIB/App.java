@@ -6,6 +6,12 @@ package KataSGCIB.KataSGCIB;
  */
 public class App {
 
+	
+	/** error message **/
+	public static final String INVALID_NUMBER = "The input must be in the range of 1 - 3999";
+	
+
+	
 	/**
 	 * convert decimals to Roman numerals
 	 * @param number number to convert
@@ -13,6 +19,7 @@ public class App {
 	 */
 	public static String roman(int number) {
 		return null;
+	
 	}
 
 }
